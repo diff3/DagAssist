@@ -20,14 +20,14 @@ function PlayerKnowsSpell(checkSpellId)
 end
 
 function DagAssist.LoadDefaultMenu()
-	
+
 	local templateMenu = DagAssist.TemplateList;
 	local sectionIndex = 1;
-	
+
 	while (sectionIndex <= table.getn(templateMenu)) do
 		local sectionData = templateMenu[sectionIndex];
 		local actionIndex = 1;
-		
+
 		while (actionIndex <= table.getn(sectionData.Actions)) do
 			local actionData = sectionData.Actions[actionIndex];
 
@@ -41,7 +41,7 @@ function DagAssist.LoadDefaultMenu()
 				actionIndex = actionIndex + 1;
 			end
 		end
-		
+
 		if (table.getn(sectionData.Actions) > 0) then
 			sectionIndex = sectionIndex + 1;
 		else
@@ -94,7 +94,7 @@ DagAssist.TemplateList = {
 	        {["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "21084"}, --Seal of Righteousness
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "31801"}, --Seal of Vengeance
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "53736"}, --Seal of Corruption
-	        {["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "20164"}, --Seal of Justice		
+	        {["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "20164"}, --Seal of Justice
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "31892"}, --Seal of Blood
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "53720"}, --Seal of the Martyr
 		}
@@ -243,7 +243,7 @@ DagAssist.TemplateList = {
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "19884"}, --Track Undead
 		}
 	},
-	
+
 	-----------
 	--RACIALS--
 	-----------
@@ -251,28 +251,28 @@ DagAssist.TemplateList = {
 		["Name"] = "Racials",
 		["Actions"] = {
 			--DRAENEI
-				
+
 			--DWARF
 				{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "2481"}, --Find Treasure
 
 			--GNOME
-			
+
 			--HUMAN
-			
+
 			--NIGHT ELF
-			
+
 			--BLOOD ELF
-			
+
 			--ORC
-			
+
 			--TAUREN
-			
+
 			--TROLL
-			
+
 			--UNDEAD
 		}
 	},
-	
+
 	-----------
 	--Professions--
 	-----------
@@ -291,53 +291,53 @@ DagAssist.TemplateList = {
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "17041"}, --Master Axesmith
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "17040"}, --Master Hammersmith
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "17039"}, --Master Swordsmith
-			
+
 			--COOKING
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "2550"}, --Cooking
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "818"}, --Basic Campfire
-			
+
 			--ENCHANTING
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "7411"}, --Enchanting
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "13262"}, --Disenchant
-			
+
 			--ENGINEERING
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "4036"}, --Engineering
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "20219"}, --Gnomish Engineer
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "20222"}, --Goblin Engineer
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "56273"}, --Wormhole: Gadgetzan
-			
+
 			--FIRST AID
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "3273"}, --First Aid
-			
+
 			--FISHING
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "7620"}, --Fishing
-			
+
 			--HERBALISM
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "2383"}, --Find Herbs
-			
+
 			--INSCRIPTION
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "45357"}, --Inscription
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "51005"}, --Milling
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "52175"}, --Decipher
-		
+
 			--JEWELCRAFTING
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "25229"}, --Jewelcrafting
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "31252"}, --Prospecting
-			
+
 			--LEATHERWORKING
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "2108"}, --Leatherworking
-			
+
 			--MINING
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "2580"}, --Find Minerals
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "2656"}, --Smelting
-			
+
 			--SKINNING
-			
+
 			--TAILORING
 			{["DA_ActionType"] = "spell",["DA_ActionSubType"] = "spell",["DA_ActionData"] = "3908"}, --Tailoring
 		}
 	},
-			
+
 	-----------
 	--Home--
 	-----------
@@ -345,6 +345,9 @@ DagAssist.TemplateList = {
 		["Name"] = "Home",
 		["Actions"] = {
 			{["DA_ActionData"] = "6948",["DA_ActionType"] = "item",["DA_ActionSubType"] = "|cffffffff|Hitem:6948:0:0:0:0:0:0:0:80:0|h[Hearthstone]|h|r"},
+			{["DA_ActionData"] = "110560",["DA_ActionType"] = "item",["DA_ActionSubType"] = "|cffffffff|Hitem:110560::::::::110:577::11::::|h[Garrison Hearthstone]|h|r"},
+			{["DA_ActionData"] = "140192",["DA_ActionType"] = "item",["DA_ActionSubType"] = "|cffffffff|Hitem:140192::::::::110:577::::::|h[Dalaran Hearthstone]|h|r"},
+			{["DA_ActionData"] = "141605",["DA_ActionType"] = "item",["DA_ActionSubType"] = "|cff0070dd|Hitem:141605::::::::110:577::::::|h[Flight Master's Whistle]|h|r"},
 		}
 	},
 

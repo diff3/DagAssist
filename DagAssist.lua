@@ -47,7 +47,7 @@ texture:SetBlendMode("BLEND");
 texture:SetAllPoints(btnMinimap);
 btnMinimap:SetHighlightTexture(texture);
 
-DagAssist.Menu = CreateFrame("Frame", "DA_Menu", btnMinimap, "SecureHandlerBaseTemplate, DA_MenuContainer");
+DagAssist.Menu = CreateFrame("Frame", "DA_Menu", UIParent, "SecureHandlerBaseTemplate, DA_MenuContainer");
 DagAssist.Menu:SetClampedToScreen(true);
 DagAssist.Menu:SetBackdropBorderColor(TOOLTIP_DEFAULT_COLOR.r, TOOLTIP_DEFAULT_COLOR.g, TOOLTIP_DEFAULT_COLOR.b);
 DagAssist.Menu:SetBackdropColor(TOOLTIP_DEFAULT_BACKGROUND_COLOR.r, TOOLTIP_DEFAULT_BACKGROUND_COLOR.g, TOOLTIP_DEFAULT_BACKGROUND_COLOR.b, 1);
