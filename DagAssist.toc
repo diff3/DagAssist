@@ -1,8 +1,8 @@
-## Interface: 60000
+## Interface: 80200
 ## Title: DagAssist
 ## Author: Dagos (Cenarius)
 ## Notes: Convenient shortcut menu
-## Version: 6.0.29
+## Version: 8.0
 ## DefaultState: enabled
 ## LoadOnDemand: 0
 ## SavedVariablesPerCharacter: DA_Vars
