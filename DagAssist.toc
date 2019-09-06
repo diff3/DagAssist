@@ -1,0 +1,14 @@
+## Interface: 60000
+## Title: DagAssist
+## Author: Dagos (Cenarius)
+## Notes: Convenient shortcut menu
+## Version: 6.0.29
+## DefaultState: enabled
+## LoadOnDemand: 0
+## SavedVariablesPerCharacter: DA_Vars
+
+DagAssist_Menu.lua
+DagAssist.xml
+DagAssist.lua
+DagAssistConfig.xml
+DagAssistConfig.lua
