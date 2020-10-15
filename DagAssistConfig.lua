@@ -8,7 +8,7 @@ if (not DagAssist) then
 end
 
 --Set up the config frame
-DagAssist.Config = CreateFrame("Frame", "DA_ConfigFrame", UIParent);
+DagAssist.Config = CreateFrame("Frame", "DA_ConfigFrame", UIParent, BackdropTemplateMixin and "BackdropTemplate");
 local fraConfig = DagAssist.Config;
 fraConfig:SetFrameStrata("DIALOG");
 fraConfig:EnableMouse(true);
@@ -60,7 +60,7 @@ fraConfig.lblInstructions:SetText("Please drag abilities/items for the selected 
 fraConfig.lblInstructions:SetTextColor(1,1,1,1);
 
 --Set up the group frame
-DagAssist.SectionGroup = CreateFrame("Frame", "DA_ConfigFrame", fraConfig);
+DagAssist.SectionGroup = CreateFrame("Frame", "DA_ConfigFrame", fraConfig, BackdropTemplateMixin and "BackdropTemplate");
 DagAssist.SectionGroup:EnableMouse(true);
 DagAssist.SectionGroup:SetSize(344, 80);
 DagAssist.SectionGroup:SetPoint("TOPLEFT", fraConfig, "TOPLEFT", 18, -80);
@@ -411,7 +411,7 @@ fraConfig.lblMenuItems:SetTextColor(1,1,0,1);
 fraConfig.previousMenuItem = nil;
 fraConfig.configButtons = {};
 for index = 1, 15 do
-	local currentItem = CreateFrame("Button", "DagAssistMenuItem"..index, fraConfig, "DAConfig_MenuButtonTemplate");
+	local currentItem = CreateFrame("Button", "DagAssistMenuItem"..index, fraConfig, "DAConfig_MenuButtonTemplate", BackdropTemplateMixin and "BackdropTemplate");
 	table.insert(fraConfig.configButtons, currentItem);
 	currentItem:SetBackdropColor(1, 0, 0, 0.5);
 	if (fraConfig.previousMenuItem) then

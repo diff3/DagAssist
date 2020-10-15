@@ -22,7 +22,7 @@
 		<HighlightFont style="GameFontHighlight"/>
 	</Button>
 
-	<Button name="DAConfig_MenuButtonTemplate" inherits="DA_MenuButtonTemplate" virtual="true">
+	<Button name="DAConfig_MenuButtonTemplate" inherits="DA_MenuButtonTemplate, BackdropTemplate" virtual="true">
 		<Size><AbsDimension y="21"/></Size>
 		<Anchors>
 			<Anchor point="LEFT" relativePoint="LEFT" />
