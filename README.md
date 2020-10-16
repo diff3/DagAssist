@@ -1,4 +1,4 @@
-DagAssistClassic
+DagAssist
 
 This is not my addon, I've just fixed some errors so it works with World of Warcraft Classic Entropy
 
