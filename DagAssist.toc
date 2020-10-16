@@ -1,8 +1,8 @@
-## Interface: 80200
+## Interface: 90001
 ## Title: DagAssist
-## Author: Entropy, Original author: Dagos (Cenarius)
+## Author: Entropy, Shadowlands fixes by EkaterinaR, Original author: Dagos (Cenarius)
 ## Notes: Convenient shortcut menu
-## Version: 8.01
+## Version: 9.01
 ## DefaultState: enabled
 ## LoadOnDemand: 0
 ## SavedVariablesPerCharacter: DA_Vars

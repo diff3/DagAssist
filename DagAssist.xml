@@ -1,53 +1,54 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
-..\FrameXML\UI.xsd"> 
-	
-	<Frame name="DA_MenuContainer" toplevel="true" frameStrata="HIGH" virtual="true">
-		<Size><AbsDimension x="220" y="32"/></Size>
-		<Backdrop bgFile="Interface\Tooltips\UI-Tooltip-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
-			<EdgeSize><AbsValue val="16"/></EdgeSize>
-			<TileSize><AbsValue val="16"/></TileSize>
-			<BackgroundInsets><AbsInset left="5" right="5" top="5" bottom="5"/></BackgroundInsets>
-		</Backdrop>
+..\FrameXML\UI.xsd">
+
+	<Frame name="DA_MenuContainer" inherits="BackdropTemplate" toplevel="true" frameStrata="HIGH" virtual="true">
+		<KeyValues>
+			<KeyValue key="backdropInfo" value="BACKDROP_TOOLTIP_16_16_5555" type="global"/>
+			<KeyValue key="backdropBorderColor" value="LEGENDARY_ORANGE_COLOR" type="global"/>
+			<KeyValue key="backdropBorderColorAlpha" value="0.25" type="number"/>
+		</KeyValues>
+		<Size>
+			<AbsDimension x="220" y="32"/>
+		</Size>
 	</Frame>
-	
+
 	<Button name="DA_MinimapButton" frameStrata="HIGH" movable="true" virtual="true">
 		<Size><AbsDimension x="32" y="32"/></Size>
-		<NormalTexture file="Interface\AddOns\DagAssist\Images\MinmapIcon" />
-		<PushedTexture file="Interface\AddOns\DagAssist\Images\MinmapIconDown" />
+		<NormalTexture file="Interface\AddOns\DagAssist\Images\MinmapIcon"/>
+		<PushedTexture file="Interface\AddOns\DagAssist\Images\MinmapIconDown"/>
 	</Button>
-	
+
 	<Button name="DA_MenuButtonTemplate" virtual="true">
 		<Size>
 			<AbsDimension x="200" y="18"/>
 		</Size>
-		<ButtonText name="$parentText" justifyH="LEFT" justifyV="MIDDLE" >
+		<ButtonText name="$parentText" justifyH="LEFT" justifyV="MIDDLE">
 			<Anchors>
-				<Anchor point="LEFT" relativeTo="$parent" relativePoint="LEFT">
-				</Anchor>
+				<Anchor point="LEFT" relativeTo="$parent" relativePoint="LEFT"></Anchor>
 			</Anchors>
 		</ButtonText>
-		
+
 		<NormalFont style="GameFontHighlightSmall"/>
 		<HighlightFont style="GameFontHighlightSmall"/>
 		<DisabledFont style="GameFontDisableSmall"/>
-		
+
 		<HighlightTexture setAllPoints="true">
-			<Color r="1" g="1" b="0" a="0.1" />
+			<Color r="1" g="1" b="0" a="0.1"/>
 		</HighlightTexture>
-		<PushedTexture  setAllPoints="true">
-			<Color r="0" g="1" b="1" a="0.1" />
+		<PushedTexture setAllPoints="true">
+			<Color r="0" g="1" b="1" a="0.1"/>
 		</PushedTexture >
-	</Button> 
-	
+	</Button>
+
 	<Button name="DA_MenuSpellButtonTemplate" inherits="DA_MenuButtonTemplate" virtual="true">
-		<ButtonText name="$parentText" justifyH="LEFT" justifyV="MIDDLE" >
+		<ButtonText name="$parentText" justifyH="LEFT" justifyV="MIDDLE">
 			<Anchors>
 				<Anchor point="LEFT" relativeTo="$parent" relativePoint="LEFT">
 					<Offset><AbsDimension x="29" y="0"/></Offset>
 				</Anchor>
 			</Anchors>
 		</ButtonText>
-		
+
 		<Layers>
 			<Layer level="OVERLAY">
 				<Texture name="$parentIcon">
@@ -57,12 +58,12 @@
 							<Offset><AbsDimension x="10" y="0"/></Offset>
 						</Anchor>
 					</Anchors>
-				</Texture>							
+				</Texture>
 			</Layer>
 		</Layers>
-	</Button>  
-	
-	<Button name="DA_MenuLabelTemplate" virtual="true" >
+	</Button>
+
+	<Button name="DA_MenuLabelTemplate" virtual="true">
 		<Size>
 			<AbsDimension x="200" y="18"/>
 		</Size>
@@ -73,14 +74,14 @@
 				</Anchor>
 			</Anchors>
 		</ButtonText>
-		
+
 		<NormalFont style="GameFontNormalSmall"/>
 		<HighlightFont style="GameFontNormalSmall"/>
 		<DisabledFont style="GameFontNormalSmall"/>
-		
+
 		<PushedTextOffset>
-			<AbsDimension x="0" y="0" />
-        </PushedTextOffset>
-	</Button>  
+			<AbsDimension x="0" y="0"/>
+		</PushedTextOffset>
+	</Button>
 
 </Ui>

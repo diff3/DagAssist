@@ -1,15 +1,41 @@
-﻿------------------------------------------------
+------------------------------------------------
 --                 DagAssist                  --
 --             Dagos of Cenarius              --
 ------------------------------------------------
+
+TODO:
+* Default spells needs an updates
+
+9.01
+* Added item count for bandage etc.
+* Fixed mount PickUp error
+* Fixed equipmentset
+* Fixed BackDrop error on DA_Editbox
+* Fixed default setup now chowing correct data
+* Change PLAYER_ENTERING_WORLD to ADDON_LOADED
+* Updated toc for 9.01
+* Updated XML files with BackDrop information needed for Shadowlands
+* Removed EVENTS not used
+* Removed code not used
+
+8.2
+* Added Heartstones to Garrison and Dalaran in config
+* Change to TopLayer
+* Fixed mount and battlePets
+* Updated toc for 8.2
+
 6.00
 * Updated TOC for 6.0
+
 5.03
 * Updated TOC for 5.3
+
 5.00
 * Updated TOC for 5.0
+
 4.10
 * Updated TOC for 4.1
+
 4.04
 * Added Cancel button to config window
 * Raised frame strata of config window
@@ -47,7 +73,7 @@
 * Self-cast and focus-cast shortcuts now work
 * Glowing-hand selection now functions properly
 * Added spell cooldowns
-* Fixed the %d problem with spell & item cooldowns 
+* Fixed the %d problem with spell & item cooldowns
 
 2.02
 * Fixed the buff type

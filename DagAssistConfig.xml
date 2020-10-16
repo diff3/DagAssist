@@ -7,13 +7,13 @@
 		</FontHeight>
 		<Color r="0" g="0" b="0"/>
 	</Font>
-	
+
 	<Button name="DA_Button" virtual="true">
 		<NormalTexture file="Interface\Buttons\UI-Panel-MinimizeButton-Up"/>
 		<PushedTexture file="Interface\Buttons\UI-Panel-MinimizeButton-Down"/>
 		<HighlightTexture file="Interface\Buttons\UI-Panel-MinimizeButton-Highlight" alphaMode="ADD"/>
 	</Button>
-	
+
 	<Button name="DA_Button2" virtual="true">
 		<NormalTexture inherits="DialogButtonNormalTexture"/>
 		<PushedTexture inherits="DialogButtonPushedTexture"/>
@@ -22,84 +22,55 @@
 		<HighlightFont style="GameFontHighlight"/>
 	</Button>
 
-	<Button name="DAConfig_MenuButtonTemplate" inherits="DA_MenuButtonTemplate" virtual="true">
+	<Button name="DAConfig_MenuButtonTemplate" inherits="DA_MenuButtonTemplate, BackdropTemplate" virtual="true">
 		<Size><AbsDimension y="21"/></Size>
 		<Anchors>
-			<Anchor point="LEFT" relativePoint="LEFT" />
-			<Anchor point="RIGHT" relativePoint="RIGHT" />
+			<Anchor point="LEFT" relativePoint="LEFT"/>
+			<Anchor point="RIGHT" relativePoint="RIGHT"/>
 		</Anchors>
-		<ButtonText name="$parentText" justifyH="LEFT" justifyV="MIDDLE" >
+		<ButtonText name="$parentText" justifyH="LEFT" justifyV="MIDDLE">
 			<Anchors>
 				<Anchor point="LEFT">
 					<Offset>
-						<AbsDimension x="25" />
+						<AbsDimension x="25"/>
 					</Offset>
 				</Anchor>
 			</Anchors>
 		</ButtonText>
-	    <NormalTexture file="Interface\Buttons\UI-Quickslot2">
+		<NormalTexture file="Interface\Buttons\UI-Quickslot2">
 			<Size><AbsDimension x="32" y="32"/></Size>
 			<Anchors>
 				<Anchor point="TOPLEFT">
-				  <Offset>
-					<AbsDimension x="-6.5" y="6.5" />
-				  </Offset>
+					<Offset>
+						<AbsDimension x="-6.5" y="6.5"/>
+					</Offset>
 				</Anchor>
 			</Anchors>
-	    </NormalTexture>
-	    <PushedTexture file="Interface\Buttons\UI-Quickslot-Depress">
+		</NormalTexture>
+		<PushedTexture file="Interface\Buttons\UI-Quickslot-Depress">
 			<Size><AbsDimension x="18" y="18"/></Size>
 			<Anchors><Anchor point="TOPLEFT"/></Anchors>
-	    </PushedTexture>
+		</PushedTexture>
 		<HighlightTexture name="$parentHighlight" file="Interface\Buttons\ButtonHilight-Square" alphaMode="ADD">
 			<Size><AbsDimension x="18" y="18"/></Size>
 			<Anchors><Anchor point="TOPLEFT"/></Anchors>
 		</HighlightTexture>
-	</Button> 
-	
+	</Button>
+
 	<Frame name="DA_Combobox" virtual="true" inherits="UIDropDownMenuTemplate">
 		<Scripts>
 			<OnLoad>
-				local cboBox = self;
-				cboBox.OnClick =  function(self)
-									UIDropDownMenu_SetSelectedID(cboBox, self:GetID());
-									cboBox.PreviousItem = cboBox.SelectedItem;
-									cboBox.SelectedItem = self.value;
-									if (type(cboBox["OnClickEvent"]) == 'function') then
-										cboBox["OnClickEvent"](cboBox, cboBox.SelectedItem);
-									end
-								end
-								
-				cboBox.AddRange = function(items)
-									cboBox.ComboItems = items;
-									UIDropDownMenu_Initialize(cboBox, cboBox.Initialize);
-									UIDropDownMenu_SetSelectedID(cboBox, 1);
-									cboBox.PreviousItem = nil;
-									cboBox.SelectedItem = items[1];
-								end
-								
-				cboBox.Initialize = function(self, level)
-									local info = UIDropDownMenu_CreateInfo();
-									for k,v in pairs(cboBox.ComboItems) do
-										info = UIDropDownMenu_CreateInfo();
-										info.text = v;
-										info.value = v;
-										info.func = cboBox.OnClick;
-										UIDropDownMenu_AddButton(info, level);
-									end
-								end
-				
-				UIDropDownMenu_SetWidth(cboBox, 120);
-				UIDropDownMenu_SetButtonWidth(cboBox, 174)
-				UIDropDownMenu_JustifyText(cboBox, "LEFT")
+				local cboBox = self; cboBox.OnClick = function(self) UIDropDownMenu_SetSelectedID(cboBox, self:GetID()); cboBox.PreviousItem = cboBox.SelectedItem; cboBox.SelectedItem = self.value; if (type(cboBox["OnClickEvent"]) == 'function') then
+				cboBox["OnClickEvent"](cboBox, cboBox.SelectedItem); end end cboBox.AddRange = function(items) cboBox.ComboItems = items; UIDropDownMenu_Initialize(cboBox, cboBox.Initialize); UIDropDownMenu_SetSelectedID(cboBox, 1); cboBox.PreviousItem = nil;
+				cboBox.SelectedItem = items[1]; end cboBox.Initialize = function(self, level) local info = UIDropDownMenu_CreateInfo(); for k,v in pairs(cboBox.ComboItems) do info = UIDropDownMenu_CreateInfo(); info.text = v; info.value = v; info.func =
+				cboBox.OnClick; UIDropDownMenu_AddButton(info, level); end end UIDropDownMenu_SetWidth(cboBox, 120); UIDropDownMenu_SetButtonWidth(cboBox, 174) UIDropDownMenu_JustifyText(cboBox, "LEFT")
 			</OnLoad>
 		</Scripts>
 	</Frame>
-	
 
 	<EditBox name="DA_Editbox" virtual="true" letters="80">
 		<TextInsets>
-			<AbsInset left="6" right="6" top="0" bottom="0" />
+			<AbsInset left="6" right="6" top="0" bottom="0"/>
 		</TextInsets>
 		<Layers>
 			<Layer level="BACKGROUND">
@@ -177,16 +148,14 @@
 		</Layers>
 		<Scripts>
 			<OnShow>
-				self:SetBackdropColor(0, 0, 0, 1);
+				<!-- self:SetBackdropColor(0, 0, 0, 1); -->
 				self:ClearFocus();
 			</OnShow>
 			<OnEscapePressed>
 				self:ClearFocus();
 			</OnEscapePressed>
 			<OnEnterPressed>
-				if (type(self["OnEnterEvent"]) == 'function') then
-					self["OnEnterEvent"](self, self:GetText());
-				end
+				if (type(self["OnEnterEvent"]) == 'function') then self["OnEnterEvent"](self, self:GetText()); end
 			</OnEnterPressed>
 		</Scripts>
 		<FontString inherits="ChatFontNormal"></FontString>
