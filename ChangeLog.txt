@@ -11,7 +11,7 @@ TODO:
 * Fixed mount PickUp error
 * Fixed equipmentset
 * Fixed BackDrop error on DA_Editbox
-* Fixed default setup now chowing correct data
+* Fixed default setup now showing correct data
 * Change PLAYER_ENTERING_WORLD to ADDON_LOADED
 * Updated toc for 9.01
 * Updated XML files with BackDrop information needed for Shadowlands
